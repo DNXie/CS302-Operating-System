@@ -1,7 +1,7 @@
 #!/bin/bash
 mkdir -p ~/lab1/11510718  
 echo -e "\c"  > ~/lab1/11510718/file.info  #overwrite the file
-dir_array=($(find $HOME \( ! -regex '.*/\..*' \) -type d))  #display all the directories recurrently
+dir_array=($(find $HOME \( ! -regex '.*/\..*' \) -type d))  #display all the directories recursively
 for d in "${dir_array[@]}"; do
 	tmp=${d//"/home/"/""} #replace "/home/" with ""
 	echo "[ "$tmp" ]" >> ~/lab1/11510718/file.info  
